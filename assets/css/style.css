@@ -1,93 +1,399 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
+RESET
+========================= */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Poppins',sans-serif;
-    background:#0b1120;
-    color:#fff;
-    line-height:1.7;
+font-family:'Poppins',sans-serif;
+background:#08111f;
+color:#ffffff;
+line-height:1.7;
+overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+ul{
+list-style:none;
 }
 
 .container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+width:90%;
+max-width:1200px;
+margin:auto;
 }
 
+/* =========================
+COLORS
+========================= */
+
+:root{
+
+--primary:#13c4ff;
+--secondary:#00e0a4;
+--dark:#08111f;
+--card:#111d31;
+--border:#1f3557;
+--text:#d8e2f0;
+--white:#ffffff;
+
+}
+
+/* =========================
+HEADER
+========================= */
+
 header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background:#08101d;
-    padding:18px 0;
-    z-index:1000;
-    border-bottom:1px solid rgba(255,255,255,.08);
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(8,17,31,.92);
+backdrop-filter:blur(10px);
+z-index:999;
+
 }
 
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+
+height:80px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+
 }
 
 .logo{
-    font-size:28px;
-    font-weight:700;
-    color:#00d4ff;
+
+font-size:30px;
+font-weight:800;
+color:var(--primary);
+
 }
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:35px;
+.logo span{
+
+color:white;
+
 }
 
-nav ul li a{
-    color:#fff;
-    text-decoration:none;
-    transition:.3s;
+.menu{
+
+display:flex;
+gap:35px;
+
 }
 
-nav ul li a:hover{
-    color:#00d4ff;
+.menu a{
+
+font-weight:500;
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:var(--primary);
+
 }
 
 .btn{
-    background:#00d4ff;
-    color:#000;
-    padding:14px 28px;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:600;
-    display:inline-block;
-    transition:.3s;
+
+display:inline-block;
+padding:14px 34px;
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+color:#000;
+font-weight:700;
+border-radius:50px;
+transition:.35s;
+
 }
 
 .btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 25px #00d4ff;
+
+transform:translateY(-4px);
+
 }
 
+/* =========================
+HERO
+========================= */
+
 .hero{
-    padding:180px 0 120px;
+
+padding-top:170px;
+padding-bottom:120px;
+
+}
+
+.hero-grid{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+
 }
 
 .hero h1{
-    font-size:58px;
-    margin-bottom:20px;
+
+font-size:62px;
+font-weight:800;
+line-height:1.15;
+margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+color:var(--primary);
+
 }
 
 .hero p{
-    font-size:20px;
-    color:#c9d1d9;
-    margin-bottom:35px;
-    max-width:700px;
+
+font-size:18px;
+color:var(--text);
+margin-bottom:35px;
+
 }
 
-.highlight{
-    color:#00d4ff;
+.hero-image{
+
+display:flex;
+justify-content:center;
+
+}
+
+.hero-image img{
+
+width:520px;
+filter:drop-shadow(0 0 35px rgba(0,212,255,.35));
+
+}
+/* =========================
+SECTION
+========================= */
+
+section{
+    padding:100px 0;
+}
+
+section h2{
+    font-size:42px;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+section> .container> p{
+    text-align:center;
+    color:var(--text);
+    max-width:700px;
+    margin:0 auto 60px;
+}
+
+/* =========================
+SERVICE GRID
+========================= */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.service-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:35px;
+    transition:.35s;
+}
+
+.service-card:hover{
+    transform:translateY(-10px);
+    border-color:var(--primary);
+    box-shadow:0 15px 40px rgba(0,212,255,.15);
+}
+
+.service-card h3{
+    margin-bottom:18px;
+    color:var(--white);
+    font-size:24px;
+}
+
+.service-card p{
+    color:var(--text);
+    font-size:16px;
+}
+
+/* =========================
+WHY CHOOSE
+========================= */
+
+.why-choose{
+    background:#0d1728;
+}
+
+/* =========================
+PROCESS
+========================= */
+
+.process{
+    background:#08111f;
+}
+
+/* =========================
+PORTFOLIO
+========================= */
+
+.portfolio{
+    background:#0d1728;
+}
+
+/* =========================
+TESTIMONIALS
+========================= */
+
+.testimonials{
+    background:#08111f;
+}
+
+/* =========================
+FAQ
+========================= */
+
+.faq{
+    background:#0d1728;
+}
+/* =========================
+FOOTER
+========================= */
+
+footer{
+    background:#050b15;
+    padding:70px 0 30px;
+    border-top:1px solid var(--border);
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer-grid h3{
+    margin-bottom:20px;
+    color:var(--white);
+}
+
+.footer-grid p,
+.footer-grid a{
+    color:var(--text);
+    display:block;
+    margin-bottom:12px;
+    transition:.3s;
+}
+
+.footer-grid a:hover{
+    color:var(--primary);
+}
+
+.copyright{
+    margin-top:50px;
+    padding-top:20px;
+    border-top:1px solid var(--border);
+    text-align:center;
+    color:var(--text);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+.hero-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.service-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+height:auto;
+padding:20px 0;
+gap:20px;
+}
+
+.menu{
+flex-direction:column;
+align-items:center;
+gap:18px;
+}
+
+.hero{
+padding-top:150px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.service-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.btn{
+width:100%;
+text-align:center;
+}
+
+section h2{
+font-size:34px;
+}
+
 }
