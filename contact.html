@@ -93,6 +93,17 @@ Contact RankFlow Agency today for a free consultation.
 <div class="contact-form">
 
 <form id="contact-form">
+  <input type="text" placeholder="Full Name" required id="name">
+
+<input type="email" placeholder="Email Address" required id="email">
+
+<input type="text" placeholder="Company Name" id="company">
+
+<input type="url" placeholder="Website URL" id="website">
+
+<select required id="service">
+
+<textarea rows="6" placeholder="Tell us about your project" id="message"></textarea>
 
 <input type="text" placeholder="Full Name" required>
 
@@ -145,7 +156,15 @@ Send Message
 </section>
 
 <script src="assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script>
+emailjs.init({
+    publicKey: "ZNZ4p7cyObzWfX4oA",
+});
+</script>
+
+<script src="assets/js/script.js"></script>
 </body>
 
 </html>
